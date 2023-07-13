@@ -657,3 +657,81 @@ find how many links are there in "CALCULATORS" module and print href and
 url 
 ?????????????????????????????????????????????
 
+
+
+====================================
+
+Day 24 - 13th July Thursday
+
+----------------------------------------
+	
+
+
+Exception in thread "main" org.openqa.selenium.ElementNotInteractableException:
+ element not interactable
+ 
+ Reason : Element is not visible 
+ 
+ Solution : make some action like scrolling or mouse hovering 
+ 
+??????????????????????????????????????????????
+Assignment 2:
+
+in  https://demo.opencart.com/ 
+find how many links are there in "Customer Service" module and print href and 
+url and test the links
+?????????????????????????????????????????????
+
+
+----------------------------------
+Dropdown Testing
+
+
+Select
+
+	Select s1=new Select(drop);
+		
+		List<WebElement> allItems=s1.getOptions();
+		
+****
+
+TestNG framework
+
+							Frameworks 
+							
+							
+		Predefined or						User-defined
+		Unit Testing
+							
+based on lang :
+
+java : junit , testNG 
+
+.net : nunit
+
+python : pytest							
+
+testNG :  TestNG , NG next generation
+
+testNG is an aPI (jar)
+
+We can install or add TestNG as a plugin in Eclipse
+
+how to add ?
+
+-------------------------------------
+Annotations in TestNG 
+
+
+@Test  - test case
+
+in TestNG , if you  have moe than one @Test methods , 
+then execution will be according to alphbetic order of method name 
+
+
+changePasswordTest
+loginTest
+registrationTest
+
+Parameters for annotations:
+
