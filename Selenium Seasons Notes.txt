@@ -735,3 +735,115 @@ registrationTest
 
 Parameters for annotations:
 
+
+
+====================================
+
+Day 25 - 14th July Friday
+
+----------------------------------------
+	
+@BeforeMethod  - for some pre conditions( browser start , etc..)  which are common to many tests
+
+we can under @BeforeMethod 
+
+this annotated method will be executed before each and every test in class 
+
+@AfterMethod -  for some post conditions(browser closing , reports generation etc..)  which are common to many tests
+
+we can under @BeforeMethod 
+
+this annotated method will be executed after each and every test in class 
+
+---------------------------
+Miscellenous Action
+
+MouseHovering :
+
+
+org.openqa.selenium.interactions
+
+Actions 
+
+Actions(Keyboard)  == getting depricated
+Actions(Keyboard, Mouse) == getting depricated
+Actions(WebDriver)
+
+Actions action=new Actions(WebDriver);
+
+moveToElement(WebElement)
+moveToElement(WebElement, int, int)
+
+
+perform():void ==> for execution of Miscellenous actions
+
+build():Action ==> this will integrate all the Miscellenous actions
+
+click(WebElement):Actions
+
+?????????????????????????????
+Assignment
+?????????????????????????????
+In below app
+https://demo.opencart.com/
+
+mousehover on "Laptops & Notebooks"
+
+then click on "Show All Laptops & Notebooks"
+
+then print how many items are displayed
+??????????????????????????????????????????????
+
+-------------------------------
+Drag And Drop
+
+dragAndDrop(WebElement, WebElement)
+
+FAILED: dragAndDropTest
+org.openqa.selenium.NoSuchElementException: no such element:
+ Unable to locate element: {"method":"xpath","selector":"//div[@id='draggable']"}
+ 
+NoSuchElementException:
+
+Reason 1 : if element is present but locator is given wrong and you are trying find 
+Solution : rectify the locator or correct the locator
+
+Reason 2 : if element is present yet loaded into DOM 
+Solution : we need to use Wait concept
+
+Reason 3: if element is present in DOM but it exists in some frame 
+Solution : switch to frame 
+
+
+
+dragAndDropBy(WebElement, int, int)
+
+here firt int is x-axis offset
+second int is y-axis offset
+
+
+?????????????????????????????
+Assignment
+?????????????????????????????
+in 
+https://emicalculator.net/
+
+drag "Home Loan Amount" to 75 Lakhs
+
+drag "Interest Rate" to 12.5%
+
+drag Loan Tenure to 15 years
+
+then validate EMI amaount as ₹92,439
+
+???????????????????????????????????????
+
+-------------------------------
+contextClick() = will rigth click on page corner
+contextClick(WebElement) = this will peform rigth click on WebElement
+
+---------------------------------
+doubleClick() == this will double click where cursor is present
+doubleClick(WebElement) == this will peform double click on WebElement
+
+--------------------------------------
