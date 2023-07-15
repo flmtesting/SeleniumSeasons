@@ -847,3 +847,87 @@ doubleClick() == this will double click where cursor is present
 doubleClick(WebElement) == this will peform double click on WebElement
 
 --------------------------------------
+
+
+
+====================================
+
+Day 26 - 15th July Saturday
+
+----------------------------------------
+
+
+switchTo():TargetLocator
+
+activeElement()
+alert()
+defaultContent()
+frame(int)
+frame(String)
+frame(WebElement)
+parentFrame()
+window(String)
+
+
+
+for Multiple window/tab Handling :
+
+
+driver.switchTo().window(String);
+
+here String is nothing but Window Id of any window/tab
+
+getWindowHandle():String
+getWindowHandles():Set<String>
+
+//span[text()='Games']/parent::span/parent::button
+or
+//span[text()='Games']/ancestor::button
+
+
+Adactin Hotel App - Apps on Google Play
+
+TestFlight - Apple
+
+?????????????????????????????????????????
+Assignment
+?????????????????????????????????????????
+in
+https://www.24hourfitness.com/
+Click on "Facebook" logo 
+and switch to that tab and click on "Login in"
+and switch back to home page 
+Click on "Instagram" logo 
+and switch to that tab and click on "Login in"
+and switch back to home page
+Click on "Youtube" logo 
+and switch to that tab and click on "About"
+and switch back to home page
+????????????????????????????????????????????
+
+
+------------------------------------------
+Multipl Frames or Frame Handling
+------------------------------------------
+
+Frame is a UI terminology to develop web components
+
+how to find wheter there is frames used in Web Page or not ?
+
+find tagname starting with frame or iframe
+
+frame is used in older HTML
+iframe is used in newer HTML
+		
+
+frame(int) ==> here int is an index of frame , which we should calcuate manually starts from zero
+frame(String) ==> here String is id or name attribute value only 
+frame(WebElement) ==> here we pass iframe WebElement
+
+defaultContent() : this will switch the focus from any frame to Page
+parentFrame() : this will switch the focus from child frame to parentFrame	
+
+//font[contains(text(),'Hate Frames Page')]/parent::a
+
+<iframe src="allclasses-frame.html" name="packageFrame" title="All classes and interfaces (except non-static nested types)"></iframe>
+
