@@ -931,3 +931,178 @@ parentFrame() : this will switch the focus from child frame to parentFrame
 
 <iframe src="allclasses-frame.html" name="packageFrame" title="All classes and interfaces (except non-static nested types)"></iframe>
 
+
+
+====================================
+
+Day 27 - 17th July Monday
+
+----------------------------------------
+
+xpath writing techinques
+
+here 
+
+//span[@tabindex='0']  ==>  1 of 3
+
+used index when you have same xpath for more elements 
+
+
+(//span[@tabindex='0'])[1]  1 of 1 
+
+(//span[@tabindex='0'])[2]  1 of 1 
+
+(//span[@tabindex='0'])[3]  1 of 1 
+
+------------------------------------
+Alerts Handling
+
+Alert(I)
+
+accept():void ==> this will click "Ok" button on alert
+dismiss(): void ==> this will click "Cancel" button on alert
+getText() : String ==> this will return the alert message in string format
+sendKeys(String) : void ==>this will be used too enter some text on alert text box
+
+switchTo():TargetLocator
+
+alert():Alert
+
+Alert al=driver.switchTo().alert();
+
+Alerts :
+
+1) Simple
+2) Confirmation
+3) Prompt alert
+
+
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+
+????????????????????????????????????????
+Assignment 1
+
+in  https://demo.guru99.com/v4/
+
+use below credentials to login
+
+User ID :	mngr266311
+Password :	
+
+click on "Delete Customer"
+
+enter some "Customer ID" and click on Submit
+
+switchTo to alert click "ok"
+
+and again switchTo new alert and click "ok"
+
+???????????????????????????????????????????????
+
+Assignment 2
+
+1. Navigate to URL : "http://demo.guru99.com/test/guru99home/"
+2. Click on the "JMeter Made easy" image.
+3. Switch to the newly appeared window.
+4. Scroll to the bottom of the screen.
+5. Verify the top tutorials values present on the screen.
+
+???????????????????????????????????????????????????
+
+How to take screenshot ?
+
+TakesScreenshot(I)
+
+getScreenshotAs(OutputType<X>):X 
+
+BASE64 : OutputType<String>
+BYTES : OutputType<byte[]>
+FILE : OutputType<File>
+
+
+File srcFile=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		
+		FileUtils.copyFile(srcFile, new File("AdactinHomePage"+date+".png"));
+		
+		
+-----------------------------------------------------------------
+
+JavaScriptExecutor
+
+JavascriptExecutor(I)
+
+executeAsyncScript(String, Object...)
+
+
+executeScript(String, Object...)
+
+here String is javascript statement
+
+Object...  varaible agruments (vargs )
+
+
+
+====================================
+
+Day 28 - 18th July Tuesday
+
+----------------------------------------
+
+
+
+window.scrollBy(0,document.body.scrollHeight);
+
+org.openqa.selenium.InvalidSelectorException: invalid selector: 
+Unable to locate an element with the xpath expression https://www.facebook.com/ 
+because of the following error:
+
+
+
+-------------------------------------------------------
+****************
+Waits or Synchronization point or timeouts 
+
+org.openqa.selenium.NoSuchElementException: no such element: 
+Unable to locate element: {"method":"xpath","selector":"//input[@name='firstname']"}
+ 
+ 
+ 1) Hard Wait
+ 
+ Thread.sleep(2000); ==> this is a java concept (not encourage)
+ 
+ 2) Implicit Wait 
+ 
+ will wait until the presence of element in DOM 
+ 
+ 
+ driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+ 
+ this statement is applied or implied for all driver.findElement statements
+ 
+ where webdriver will wait for element for upto 30 seconds
+ 
+ if the element is found within 2 seconds then it won't waste the remaining 28 seconds 
+ 
+ 
+ 3)Explicit Wait / conditional based wait 
+ 
+ 
+ 
+ (//a[contains(@href,'gold-and-silver')])[3]
+ 
+ //span[@id='spinner']
+ 
+ Wait(I) : 
+ until
+ 
+ WebDriverWait(C)
+ 
+ WebDriverWait(WebDriver, long) 1; here long represents no of second to meet some conditons
+ 
+ 
+ ExpectedConditions(C)
+ 
+ 
+ invisibilityOfElementLocated(By)
+ 
+ 
