@@ -1106,3 +1106,98 @@ Unable to locate element: {"method":"xpath","selector":"//input[@name='firstname
  invisibilityOfElementLocated(By)
  
  
+
+====================================
+
+Day 29 - 19th July Wednesday
+
+----------------------------------------
+
+3 things can be improved frome Explicit Wait 
+
+1. in WebDriverWait constructor the 2nd paramater will take long value which
+   always represents SECONDS
+2. the polling time in WebDriverWait is always 500 millis 
+3. there is no inbuilt exception handling mechanism
+
+  
+
+FluentWait:
+
+1 . withTimeout(Duration) : 
+
+2. pollingEvery(Duration) 
+
+3. ignoring(ExceptionClass)
+
+
+Radio Button Validation:
+
+<input type="radio" name="group1" value="Milk">
+
+<input type="radio" name="group1" value="Butter" checked="">
+
+<input type="radio" name="group1" value="Cheese">
+
+//input[@name='group1']
+
+//td[@class='table5']/child::input
+or
+//td[@class='table5']/descendant::input
+
+
+-----------------
+WebTables
+
+HTML Terminology
+
+table  - for table
+th  - table header
+tbody - table body
+tr - row
+td - column
+
+in https://www.hdfcbank.com/personal/resources/rates
+
+
+//font[text()='Domestic / NRO / NRE FIXED DEPOSIT RATE')]/ancestor::div
+
+//table[@class='rates-table-main']/descendant::td[text()='46 - 60 days']
+
+
+//font[text()='Domestic / NRO / NRE FIXED DEPOSIT RATE']/ancestor::div[1]/following-sibling::div/descendant::td[text()='46 - 60 days']
+
+//font[text()='Domestic / NRO / NRE FIXED DEPOSIT RATE']/ancestor::div[1]/following-sibling::div/descendant::td[text()='46 - 60 days']/following-sibling::td[1]
+
+//font[text()='Domestic / NRO / NRE FIXED DEPOSIT RATE']/ancestor::div[1]/following-sibling::div/descendant::td[text()='46 - 60 days']/following-sibling::td[2]
+
+
+						WebTables
+						
+		static						Dynamic
+
+
+Static means always rows and columns are constant
+
+
+
+//table/tbody/tr[1]/td[1]/a  //table/tbody/tr[1]/td[2] .....//table/tbody/tr[1]/td[8]
+
+//table/tbody/tr[2]/td[1]/a
+
+:
+
+:
+
+
+
+//table/tbody/tr[36]/td[1]/a	
+
+	
+
+String part1="//table/tbody/tr[";
+String part2="]/td[";
+String part3="]";
+
+
+
