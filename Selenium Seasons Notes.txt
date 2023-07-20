@@ -1201,3 +1201,93 @@ String part3="]";
 
 
 
+====================================
+
+Day 30 - 30th July Thursday
+
+----------------------------------------
+
+
+we will focus on table and get no of rows in it (using locator strategy tagName tr )
+
+again we will go to each row and find no of columns in it (using locator strategy tagName td )
+
+
+
+***
+Maven 
+
+Project management tool or Source control management tools 
+
+
+pom.xml (Project Object Model )
+
+how to download maven and configure :
+
+https://maven.apache.org/download.cgi
+
+Apache Maven 3.9.3 is the latest release
+
+apache-maven-3.9.3-bin.zip
+
+download above zip file and extract it
+
+
+for Configuration : 
+
+
+go to environemnt varibales
+
+
+set below variables
+
+
+MAVEN_HOME : till maven folder after unzipping 
+
+D:\FLM0730PM\softwares\apache-maven-3.9.3-bin\apache-maven-3.9.3
+
+M2_HOME : till bin folder 
+
+path : till bin folder
+
+how to check or confirm ?
+
+go to cmd 
+
+give below command
+
+mvn -version
+
+C:\Users\Riyaz>mvn -version
+Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+Maven home: D:\FLM0730PM\softwares\apache-maven-3.9.3-bin\apache-maven-3.9.3
+Java version: 11.0.18, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+
+
+---------------
+New Maven Project
+
+Group Id: domain.projectname  e.g www.citibank.com ==> com.citibank 
+Artifact Id :  the project in which your are working 
+
+
+https://adactinhotelapp.com/
+
+Group Id: com.adactinhotelapp
+Artifact Id : FrameworkAutomation
+
+
+src/main/java   ==> APP development code  (java code)
+src/main/resources ==>  non java for development
+src/test/java  ==> this for unit test cases 
+src/test/resources ==> test data etc..
+
+target
+
+pom.xml  ==> this will have all the dependencies (means the jar or plugins required for project)
+
+
+
+
